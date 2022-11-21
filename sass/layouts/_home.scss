@@ -1,6 +1,7 @@
 $mainblue: "#1b2845";
 $lightblue: #77d2d2;
-$darkback:#0c171b; 
+// $darkback:#0c171b; 
+$darkback:#04090a; 
 
 
 .main {
@@ -82,7 +83,7 @@ $darkback:#0c171b;
             }
         }
 
-        .second-page {
+        .first-page {
             background-color: transparent;
             color: white;
             position: absolute;
@@ -100,25 +101,42 @@ $darkback:#0c171b;
 
             h1 {
                 display: block;
+                padding: 2rem;
                 font-size: 36px;
                 line-height: 36px;
                 letter-spacing: -1.4px;
+                flex: 1;
             }
 
-            .second-text-box {
-                padding-top:5rem;
+            .first-text-box {
+                flex: 3;
+                padding-top:8rem;
                 padding-left: 2rem;
                 width: 96%;
                 border-top: 1px solid white;
-                display: block;
-                font-size: 36px;
+                display: flex;
+                flex-direction: column;
+                text-align: start;
+                font-size: 35px;
                 line-height: 36px;
+                white-space: nowrap;
                 letter-spacing: -1.4px;
+             
+
+                h4 {
+                    overflow: hidden;
+                    // opacity: 0;
+                }
+
+                span {
+                    display: block;
+                    padding: 0 .4rem;
+                }
             }
             
         }
 
-        .third-page {
+        .second-page {
             width: 100%;
             min-height: 100vh;
             background-color: $darkback;
