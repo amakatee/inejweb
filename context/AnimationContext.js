@@ -27,6 +27,10 @@ export const AnimationContext = ({children}) => {
     const cta3Ref = useRef()
     const darkPageRef = useRef()
     const buttonRef = useRef()
+    const getKnow1 = useRef()
+    const getKnow2 = useRef()
+    const getKnow3 = useRef()
+
 
 
 
@@ -87,9 +91,9 @@ export const AnimationContext = ({children}) => {
                 
                     }
                   })
-             tlIntro2.fromTo(cta1Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4})
-             tlIntro2.fromTo(cta2Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-5%")
-             tlIntro2.fromTo(cta3Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-10%")
+             gsap.fromTo(cta1Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4})
+             gsap.fromTo(cta2Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-5%")
+             gsap.fromTo(cta3Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-10%")
 
              }
              
@@ -114,8 +118,8 @@ export const AnimationContext = ({children}) => {
                
                    }
                  })
-            tlIntro3.fromTo(darkPageRef.current, { y: 0},{ y: -80 })
-            tlIntro3.fromTo(buttonRef.current, { y: 0},{ y: -80 })
+            tlIntro3.fromTo(darkPageRef.current, { y: 9},{ y: -80 })
+            tlIntro3.fromTo(buttonRef.current, { y: 0},{ y: -90 })
           
            
 
@@ -125,11 +129,27 @@ export const AnimationContext = ({children}) => {
 
         },[secondSecVis])
 
+        // useEffect(() => {
+        //   if(thirdSectionVis) {
+        //     const tlIntro4 = gsap.timeline({
+        //       scrollTrigger: {
+        //         trigger: entryThird.target,
+        //         start: '0%',
+        //         end: '90%',
+        //         scrub: true,
+        //     }
+        //     })
+
+        //     tlIntro4.fromTo(getKnow1.current, {y: "-100%", opacity:0}, {y: "0%"})
+
+        //   }
+        // }, [thirdSectionVis])
+
       
 
     return (
         <TransitionContext.Provider
-        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref}}
+        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref, getKnow1, getKnow2, getKnow3}}
         >{children}</TransitionContext.Provider>
     )
 }

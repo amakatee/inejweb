@@ -1,0 +1,40 @@
+.navbar {
+    z-index: 30;
+    position: absolute;
+    top: 0;
+    background-color: $darkback;
+    width: 100%;
+    min-height: 10vh;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 3rem;
+    align-items: center;
+
+    color: white;
+    .logo {
+        font-weight: 200;
+        font-size: 1.4rem;
+     
+        line-height: 28px;
+        white-space: nowrap;
+        letter-spacing: -1.4px;
+    }
+
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+        
+        .nav-line{
+            background-color: rgb(255, 255, 255);
+            width: 2rem;
+            height: .1rem;
+
+        }
+    }
+
+
+
+}

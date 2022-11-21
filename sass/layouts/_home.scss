@@ -9,7 +9,7 @@ $darkback:#04090a;
     position: absolute;
     width: 96%;
   
-    min-height: 100vh;
+    min-height: 325vh;
     top: 3%;
     left: 2%;
 
@@ -81,7 +81,12 @@ $darkback:#04090a;
 
            .first-top {
                flex: 1;
-               padding: 4rem;
+               padding-top: 8rem;
+               display: flex;
+               align-items: flex-start;
+               text-align: start;
+               
+
            }
             .first-text-box {
                 flex: 3;
@@ -93,6 +98,7 @@ $darkback:#04090a;
                 border-top: 1px solid white;
                 display: flex;
                 flex-direction: column;
+                
                 text-align: start;
             
              
@@ -103,7 +109,7 @@ $darkback:#04090a;
                     line-height: 28px;
                     white-space: nowrap;
                     letter-spacing: -1.4px;
-                    // opacity: 0;
+                     opacity: 0;
                 }
 
                 span {
@@ -158,10 +164,5 @@ $darkback:#04090a;
 
 }
 
-.firs-page-dark {
-    width: 100vw;
-    background-color: $darkback;
-    height: 100vh;
-}
 
 
