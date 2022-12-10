@@ -30,8 +30,31 @@ export const AnimationContext = ({children}) => {
     const getKnow1 = useRef()
     const getKnow2 = useRef()
     const getKnow3 = useRef()
+    const thirdHeaderRef1 = useRef()
+    const thirdHeaderRef2 = useRef()
+     const getToKnowRef = useRef()
+     
 
 
+
+
+   
+   
+ 
+
+    // useEffect(() => {
+    //   let q = gsap.utils.selector(darkPageRef);
+
+    //   gsap.to(q(".getknow-cont"), {
+    //     opacity: 1,
+    //     scale: 1,
+    //     duration: 1,
+    //     stagger: 0.1,
+    //     repeat: -1,
+    //     repeatDelay: 1,
+    //     yoyo: true
+    //   });
+    // }, []);
 
 
 
@@ -96,7 +119,9 @@ export const AnimationContext = ({children}) => {
              gsap.fromTo(cta3Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-10%")
 
              }
-             
+          
+
+    
              
 
          },[secondSecVis])
@@ -110,6 +135,8 @@ export const AnimationContext = ({children}) => {
                      start: '-5%',
                      end: '30%',
                      scrub: true,
+                    //  pin: true,
+                    //  pinSpacing: false,
                  
                     
                     
@@ -128,6 +155,47 @@ export const AnimationContext = ({children}) => {
             
 
         },[secondSecVis])
+
+        useEffect(() => {
+          if(thirdSectionVis) {
+            const tlIntro3 = gsap.timeline({
+              scrollTrigger: {
+                trigger: entryThird.target,
+                start: '-65%',
+                end: '80%',
+                scrub: true,
+                stagger: 1,
+             
+            }
+            })
+            tlIntro3.fromTo(thirdHeaderRef1.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4,  })
+            tlIntro3.fromTo(thirdHeaderRef2.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4,  })
+
+            let q = gsap.utils.selector(getToKnowRef);
+
+            tlIntro3.to(q(".getknow-cont"), {
+              opacity: 1,
+              y: '-15%',
+              scale: 1,
+              duration: 1,
+              stagger: 1,
+              yoyo: true
+            });
+
+            tlIntro3.fromTo(q(".getknow-cont h4"), {
+              
+              y: '-15%',
+              scale: 1,
+              duration: 1,
+              stagger: 1,
+              yoyo: true
+            }, { y: '0%'});
+   
+            console.log(q(".getknow-cont h4"))
+          }
+        }, [thirdSectionVis])
+
+        
 
         // useEffect(() => {
         //   if(thirdSectionVis) {
@@ -149,7 +217,7 @@ export const AnimationContext = ({children}) => {
 
     return (
         <TransitionContext.Provider
-        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref, getKnow1, getKnow2, getKnow3}}
+        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref, getKnow1, getKnow2, getKnow3, getToKnowRef, thirdHeaderRef1, thirdHeaderRef2}}
         >{children}</TransitionContext.Provider>
     )
 }

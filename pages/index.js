@@ -6,9 +6,24 @@ import TransitionContext from '../context/AnimationContext'
 import useGsap from '../hooks/useGsap'
 import styles from '../styles/Home.module.css'
 
+const firstPageText = {
+  line1:'hello',
+  line2: "fgd",
+  line3: 'dfsf'
+}
+
+const secondPageText = {
+  headerText:" We proveide greate solutions",
+  boxText: [
+    {
+      header: "Expretise",
+      mainText: "Some text"
+    }
+  ]
+}
 
 export default function Home() {
-  const {secondSection, firstSection,thirdSection, cta1Ref,buttonRef ,darkPageRef, cta2Ref, cta3Ref,  getKnow1, getKnow2, getKnow3} = useGsap()
+  const {secondSection, firstSection,thirdSection, cta1Ref,buttonRef ,darkPageRef, cta2Ref, cta3Ref,  getKnow1, getKnow2, getKnow3,getToKnowRef, thirdHeaderRef1, thirdHeaderRef2} = useGsap()
 
   return (
     <>
@@ -38,21 +53,26 @@ export default function Home() {
           </div>
           
           <div className='first-text-box'>
-              <h3>hello you </h3>
-              <h4 ref={cta1Ref}><span className="cta1">We help companies</span></h4>
-              <h4 ref={cta2Ref}><span className="cta1">апыоврпалорыр </span></h4>
-              <h4 ref={cta3Ref}><span className="cta1">ловращ</span></h4>
+              <h3>{secondPageText.headerText} </h3>
+              <div className='cta-text'>
+              <h4 className='cta4' ><span ref={cta1Ref} className="cta1">{firstPageText.line1}</span></h4>
+              <h4  className='cta4'><span  ref={cta2Ref} className="cta1">{firstPageText.line2} </span></h4>
+              <h4  className='cta4'><span  ref={cta3Ref} className="cta1">{firstPageText.line3}</span></h4>
+              </div>
        
           </div>
          <div className='first-page-btn'>
-         <div ref={buttonRef} className='first-contact-button'>
+         {/* <div ref={buttonRef} className='first-contact-button'>
             <h4>Contact</h4>
-          </div>
+          </div> */}
          </div>
 
-         <div ref={darkPageRef} className='firs-page-dark'>
-           <h3>We provide great busness Solutions</h3>
-           <div className='getknow'>
+         <div ref={thirdSection} className='firs-page-dark'>
+           <div className='thirdHeader'>
+           <h3 > <span ref={thirdHeaderRef1}>We provide great</span></h3>
+           <h3> <span ref={thirdHeaderRef2}> busness Solutions</span></h3>
+           </div>
+           <div ref={getToKnowRef} className='getknow'>
            <div ref={getKnow1} className='getknow-cont'>
               <h4>Expertise</h4>
               <p>Huge helps you make bold leaps that reimagine your customer experience and create positive disruption with powerful results. </p>

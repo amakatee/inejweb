@@ -28,7 +28,7 @@
     
 
         .getknow-cont {
-           
+            opacity: 0;
             border-top: 1px solid white;
             margin-bottom: 3rem;
             display: flex;
@@ -80,5 +80,17 @@
             }
         }
       
+    }
+
+    .thirdHeader {
+        display: flex;
+        flex-direction: column;
+
+        h4{
+            overflow: hidden;
+        }
+        span{
+            display: block;
+        }
     }
 }
