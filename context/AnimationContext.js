@@ -21,7 +21,7 @@ export const AnimationContext = ({children}) => {
     const { ref:secondSection , inView: secondSecVis, entry:entrySecond } = useInView();
     const { ref:thirdSection , inView: thirdSectionVis, entry:entryThird } = useInView();
 
-
+    const mobileNavRef = useRef()
     const cta1Ref = useRef()
     const cta2Ref = useRef()
     const cta3Ref = useRef()
@@ -34,6 +34,8 @@ export const AnimationContext = ({children}) => {
     const thirdHeaderRef2 = useRef()
      const getToKnowRef = useRef()
      
+
+    gsap.fromTo(mobileNavRef.current, {y:"-100%"} , {y:"0%", duration:1 }) 
 
 
 
@@ -217,7 +219,7 @@ export const AnimationContext = ({children}) => {
 
     return (
         <TransitionContext.Provider
-        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref, getKnow1, getKnow2, getKnow3, getToKnowRef, thirdHeaderRef1, thirdHeaderRef2}}
+        value={{firstSection, secondSection,thirdSection,darkPageRef,buttonRef, cta1Ref , cta2Ref, cta3Ref, getKnow1, getKnow2, getKnow3, getToKnowRef, thirdHeaderRef1, thirdHeaderRef2, mobileNavRef}}
         >{children}</TransitionContext.Provider>
     )
 }

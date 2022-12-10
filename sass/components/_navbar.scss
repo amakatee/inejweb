@@ -38,3 +38,36 @@
 
 
 }
+
+.mobile-nav {
+    position: fixed;
+    z-index: 40;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+
+
+    .nav-list {
+        padding: 3em 1em;
+        gap: 3rem;
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        min-height: 80vh;
+
+     > * {
+            list-style: none;
+          padding: .9em .4em;
+          transition: .5s ease;
+           
+
+          &:hover {
+              border-bottom: 1px solid black;
+          }
+        }
+        
+
+    }
+}

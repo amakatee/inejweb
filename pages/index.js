@@ -101,7 +101,7 @@ export default function Home() {
              </span>
            </div>
 
-           <div className='getknow-contact'>
+           <div className='getknow-contact-white '>
              <h4 className='contact'>Lets talk</h4>
              <span  className='arrow' >
              

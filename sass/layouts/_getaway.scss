@@ -88,9 +88,29 @@
 
         h4{
             overflow: hidden;
+   
         }
         span{
             display: block;
+            // background-color: blue;
         }
     }
+}
+
+
+.getknow-contact-white {
+    background-color: white;
+    color: black;
+    position: fixed;
+    bottom: 0;
+    z-index: 30;
+  
+    left: 2vw;
+    right: 2vw;
+    min-height: 7vh;
+   display: flex;
+   justify-content: space-between;
+   padding-inline: 1rem ;
+   align-items: center;
+  
 }
