@@ -61,6 +61,7 @@
             list-style: none;
           padding: .9em .4em;
           transition: .5s ease;
+          color: black;
            
 
           &:hover {
@@ -70,4 +71,14 @@
         
 
     }
+}
+
+.mob-nav {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    text-decoration: underline;
+    height: 8vh;
 }
