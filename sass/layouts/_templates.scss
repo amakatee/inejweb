@@ -50,10 +50,37 @@
                 border-top: 1px solid white;
                
             }
+            .templ-text-main {
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 3rem;
+                    width: 90%;
+                    margin: auto;
+                }
+        
+                
+                ul li {
+                    list-style: none;
+                }
+            }
 
         }
 
     }
 
     
+}
+
+.templ-text {
+    font-size: 1.3rem;
+    span {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.352);
+    }
+}
+
+.bottom-img {
+    padding-block: 3rem;
 }
