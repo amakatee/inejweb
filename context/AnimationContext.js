@@ -171,8 +171,8 @@ export const AnimationContext = ({children}) => {
              
             }
             })
-            tlIntro3.fromTo(thirdHeaderRef1.current, {opacity: 0, y: "50%"},{opacity: 1, y: "-10%", duration:.4,  })
-            tlIntro3.fromTo(thirdHeaderRef2.current, {opacity: 0, y: "50%"},{opacity: 1, y: "-10%", duration:.4,  })
+            tlIntro3.fromTo(thirdHeaderRef1.current, {opacity: 0, y: "100%"},{opacity: 1, y: "-10%", duration:.4,  })
+            tlIntro3.fromTo(thirdHeaderRef2.current, {opacity: 0, y: "100%"},{opacity: 1, y: "-10%", duration:.4,  })
 
             let q = gsap.utils.selector(getToKnowRef);
 

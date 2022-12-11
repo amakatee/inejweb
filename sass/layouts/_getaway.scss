@@ -16,6 +16,7 @@
 
     .getknow{
         width: 90vw;
+        
 
         display: flex;
         flex-wrap: wrap;
@@ -29,7 +30,9 @@
     
 
         .getknow-cont {
+           
             opacity: 0;
+         
             border-top: 1px solid white;
             margin-bottom: 3rem;
             display: flex;
@@ -38,6 +41,8 @@
             text-align: start;
             gap: 2rem;
             flex: 50%;
+            width: 88vw;
+          
             
             padding-block: 6rem;
        
@@ -92,8 +97,10 @@
       
         flex-direction: column;
         width: 90%;
+        align-items: center;
 
-        h4{
+        h3{
+            
             
             overflow: hidden;
    

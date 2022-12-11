@@ -66,8 +66,10 @@ export default function Home() {
 
          <div ref={thirdSection} className='firs-page-dark'>
            <div className='thirdHeader'>
+
            <h3 > <span ref={thirdHeaderRef1}>Выгодные решения</span></h3>
            <h3> <span ref={thirdHeaderRef2}>для вашего бизнеса</span></h3>
+           
            </div>
            <div ref={getToKnowRef} className='getknow'>
              <Link href='/templates'>
