@@ -7,9 +7,9 @@
     gap: 3rem;
     padding-left: 2rem;
     padding-block: 5rem;
-
+    
     h3 {
-        font-size: 36px;
+        font-size: 33px;
         line-height: 36px;
         letter-spacing: -1.4px;
     }
@@ -24,6 +24,7 @@
         padding: 10px;
 
         gap: 8rem;
+        padding-bottom: 8rem;
 
     
 
@@ -42,11 +43,15 @@
        
             height: 100px;
 
+            cursor: pointer;
+        
+
             h4 {
                 display: block;
                 font-size: 36px;
                 line-height: 36px;
                 letter-spacing: -1.4px;
+                z-index: 60;
                 // margin-bottom: 2rem;
             }
             p {
@@ -84,9 +89,12 @@
 
     .thirdHeader {
         display: flex;
+      
         flex-direction: column;
+        width: 90%;
 
         h4{
+            
             overflow: hidden;
    
         }

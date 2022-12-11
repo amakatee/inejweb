@@ -108,6 +108,7 @@ export const AnimationContext = ({children}) => {
                       start: '-5%',
                       end: '10%',
                       scrub: true,
+                      stagger: .1
                   
                      
                      
@@ -116,9 +117,9 @@ export const AnimationContext = ({children}) => {
                 
                     }
                   })
-             gsap.fromTo(cta1Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4})
-             gsap.fromTo(cta2Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-5%")
-             gsap.fromTo(cta3Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4}, "-10%")
+             gsap.fromTo(cta1Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.2})
+             gsap.fromTo(cta2Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.3, delay:.2})
+             gsap.fromTo(cta3Ref.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.3,  delay:.4})
 
              }
           
@@ -134,8 +135,8 @@ export const AnimationContext = ({children}) => {
                const tlIntro3 = gsap.timeline({
                    scrollTrigger: {
                      trigger: entrySecond.target,
-                     start: '-5%',
-                     end: '30%',
+                     start: '-40%',
+                     end: '-10%',
                      scrub: true,
                     //  pin: true,
                     //  pinSpacing: false,
@@ -170,8 +171,8 @@ export const AnimationContext = ({children}) => {
              
             }
             })
-            tlIntro3.fromTo(thirdHeaderRef1.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4,  })
-            tlIntro3.fromTo(thirdHeaderRef2.current, {opacity: 0, y: "100%"},{opacity: 1, y: "0%", duration:.4,  })
+            tlIntro3.fromTo(thirdHeaderRef1.current, {opacity: 0, y: "50%"},{opacity: 1, y: "-10%", duration:.4,  })
+            tlIntro3.fromTo(thirdHeaderRef2.current, {opacity: 0, y: "50%"},{opacity: 1, y: "-10%", duration:.4,  })
 
             let q = gsap.utils.selector(getToKnowRef);
 
@@ -186,12 +187,12 @@ export const AnimationContext = ({children}) => {
 
             tlIntro3.fromTo(q(".getknow-cont h4"), {
               
-              y: '-15%',
+              y: '-20%',
               scale: 1,
               duration: 1,
               stagger: 1,
               yoyo: true
-            }, { y: '0%'});
+            }, { y: '10%'});
    
             console.log(q(".getknow-cont h4"))
           }

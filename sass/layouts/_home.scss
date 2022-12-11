@@ -3,19 +3,26 @@ $lightblue: #77d2d2;
 // $darkback:#0c171b; 
 $darkback:#04090a; 
 
+a {
+    text-decoration: none;
+    color: white;
+}
 
 .lines-overlay {
     z-index: 10;
-    position: absolute;
+    position: fixed;
     width: 96%;
-  
-    min-height: 300vh;
+    height: auto;
+    // min-height: 200vh;
+    // max-height: 400vh;
+    height: 100vh;
     top: 3%;
     left: 2%;
 
 
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
     .line {
         background-color: rgb(255, 255, 255);
         width: 1px;
@@ -105,11 +112,11 @@ $darkback:#04090a;
                 .cta-text{
                     display: flex ;
                     flex-direction: column;
-                    font-size: 3rem;
+                    font-size: 3.5rem;
                         line-height:1.2;
                      letter-spacing: -1.4px;
                          opacity: 1;
-                         gap: .1rem;
+                   
                          
                         
 
@@ -120,6 +127,7 @@ $darkback:#04090a;
     
                     span {
                       display: block;
+                      margin-block: -5px;
                   
                        
               
